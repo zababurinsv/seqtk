@@ -1,0 +1,9 @@
+.PHONY: all clean install uninstall
+
+install:
+	install ./*.js ./*.wasm ../dist/
+	rm -fr *.js *.o *.html *.wasm *.wasm.map
+uninstall:
+	rm -rf ../dist/*.js ../dist/*.wasm
+clean:
+	rm -fr *.js *.o *.html *.wasm *.wasm.map *.depend
