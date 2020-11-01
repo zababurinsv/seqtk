@@ -1,0 +1,9 @@
+.PHONY: all clean install uninstall
+
+install:
+	install ./seqtk.js ./seqtk.wasm ../dist/
+	rm -fr seqtk.js *.o seqtk.html seqtk.wasm seqtk.wasm.map
+uninstall:
+	rm -rf ../dist/seqtk.js ../dist/seqtk.wasm
+clean:
+	rm -fr seqtk seqtk.js *.o seqtk.html seqtk.wasm seqtk.wasm.map

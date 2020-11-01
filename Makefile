@@ -7,6 +7,9 @@ all:seqtk
 seqtk:seqtk.c khash.h kseq.h
 		$(CC) $(CFLAGS) seqtk.c -o $@ -lz -lm
 
+seqtk.js:seqtk.c khash.h kseq.h
+		$(CC) $(CFLAGS) seqtk.c -o $@ -lz -lm
+
 install:all
 		install seqtk $(BINDIR)
 
